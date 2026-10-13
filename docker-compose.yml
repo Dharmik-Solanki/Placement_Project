@@ -1,0 +1,19 @@
+services:
+  nfsu-placement-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nfsu_placement_portal
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - JWT_SECRET=nfsu-placement-secret-key-2026-27
+    volumes:
+      - nfsu_db_data:/app/server/data
+
+volumes:
+  nfsu_db_data:
+    driver: local

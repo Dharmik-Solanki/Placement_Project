@@ -1,0 +1,17 @@
+{
+  "name": "nfsu-placement-portal",
+  "version": "1.0.0",
+  "description": "National Forensic Sciences University (NFSU) Placement Cell Management System 2026-27",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm run test --prefix server",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
